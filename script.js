@@ -2,11 +2,11 @@ window.addEventListener('mousemove', (event) => {
     // Posição do mouse
     let mousePos = { x: event.clientX, y: event.clientY };
 
-    let button = document.getElementById("denial")
-    let elementPos = button.getBoundingClientRect();
+    let denialButton = document.getElementById("denial")
+    let elementPos = denialButton.getBoundingClientRect();
 
     // Medidas do botão
-    let buttonMeasures = {width: button.offsetWidth, height: button.offsetHeight}
+    let buttonMeasures = {width: denialButton.offsetWidth, height: denialButton.offsetHeight}
 
     // Posição do centro botão
     let buttonPos = { x: elementPos.left + (buttonMeasures.width / 2), y: elementPos.top + (buttonMeasures.height / 2) }
@@ -31,9 +31,9 @@ window.addEventListener('mousemove', (event) => {
     let randomLeft = getRandomNumber(0, winWidth);
 
     if (distance <= 50) {
-      button.style.position = 'fixed'
-      button.style.position = randomTop +"px";
-      button.style.top = randomLeft +"px";
+      denialButton.style.position = 'fixed'
+      denialButton.style.position = randomTop +"px";
+      denialButton.style.top = randomLeft +"px";
       }
   });
   
