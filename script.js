@@ -17,7 +17,6 @@ window.addEventListener('mousemove', (event) => {
     }
 
     let distance = calculateDistance(mousePos.x, buttonPos.x, mousePos.y, buttonPos.y)
-    console.log(mousePos)
 
     const windowWidth = window.innerWidth * 0.9;
     const windowHeight = window.innerHeight * 0.9;
@@ -27,10 +26,11 @@ window.addEventListener('mousemove', (event) => {
       return Math.random() * (max - min) + min; 
     }
 
-    let randomTop = getRandomNumber(0, windowHeight);
-    let randomLeft = getRandomNumber(0, windowWidth);
-
+    
     if (distance <= 70) {
+      let randomTop = getRandomNumber(0, windowHeight);
+      let randomLeft = getRandomNumber(0, windowWidth);
+
       denialButton.style.position = "fixed"
       denialButton.style.top = randomTop +"px";
       denialButton.style.left = randomLeft +"px";
